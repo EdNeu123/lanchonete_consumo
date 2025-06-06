@@ -9,6 +9,8 @@ import Register from './pages/Register';
 import App from './pages/App';
 import Sidebar from "./components/Sidebar";
 import { isAuthenticated } from "./services/auth";
+import Products from "./pages/Products";
+import Orders from "./pages/Orders";
 const MainPage = () => <Main />
 const LoginPage = () => <Login />
 const LogoutPage = () => <Logout />
@@ -29,6 +31,8 @@ const Rotas = () => (
             <Route path='/logout' element={<LogoutPage />} />
             <Route path='/app' element={<AppPage />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/orders' element={<Orders />} />
             <Route path='*' element={<NotFoundPage />} />
         </Routes>
     </Router>
