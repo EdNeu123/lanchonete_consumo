@@ -16,7 +16,7 @@ const Register = () => {
             return;
         }
         try {
-            await api.post("/signup", { email, senha, tipo });
+            await api.post("/signup", { email, senha, tipo: Number(tipo) });
             navigate("/login");
         } catch (err) {
             setError("Houve um problema ao cadastrar. Tente novamente.");
